@@ -497,9 +497,20 @@ demo.state2.prototype = {
                 this.tween88.start();
             },this);
             this.tween88.onComplete.add(function(){
+                if (this.txtNum == 5) {
+                    this.btnNextQuestion.visible = true;
+                    this.txtNextQuestion.visible = true;
+                    this.drawBox.visible = true;
+                    this.drawBoxTxt.visible = true;
+                    this.btnNext.visible = false;
+                    this.txtNext.visible = false;
+                }
+                else if (this.txtNum !=5) {
                 this.rectBox.alpha = 1;
                 this.btnNext.visible = true;
                 this.txtNext.visible = true;
+            }
+            
             },this);
           
         },this);

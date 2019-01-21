@@ -10,7 +10,7 @@ demo.state1.prototype = {
         console.log("state1");
         addChangeStateEventListers(); 
         //Background
-        this.background = GameInstance.add.sprite(0,0,'newBackground');
+        this.background = GameInstance.add.sprite(0,0,'newBackground1');
         this.background.scale.setTo(1, 1);
         //Phaser.Text
         this.title.h1 = GameInstance.add.text(GameInstance.world.centerX,GameInstance.world.centerY-200,"Converting Units of Length");
