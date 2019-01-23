@@ -106,8 +106,11 @@ demo.state2.prototype = {
         this.txtNextQuestion.visible = false;
         this.drawBox.visible = false;
         this.drawBoxTxt.visible = false;
-    
 
+        
+    
+        //Home
+        btnHome();
 
         //Question Number
         this.txtNum = 1;

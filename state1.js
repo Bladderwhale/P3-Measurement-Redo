@@ -93,13 +93,9 @@ demo.state1.prototype = {
          .addFontWeight('bold',0)
 
          //Phaser events
-
-
-
-
-        
-
-        
+         this.leftBtn.events.onInputDown.add(function(){
+             GameInstance.state.start('state2');
+         },this);
     },
     update: function(){
     }

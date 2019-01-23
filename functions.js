@@ -41,12 +41,20 @@ function loadAssets() {
     GameInstance.load.image('button','assets/1/StartButton.png');
     GameInstance.load.spritesheet('circle', 'assets/circle.png',580,580,12);
     GameInstance.load.image('newBackground','assets/BackgroundNew2.jpg');
-    GameInstance.load.image('newBackground1','assets/New Folder/BackgroundNew.jpg')
+    GameInstance.load.image('newBackground1','assets/New Folder/BackgroundNew.jpg');
 };
 
 function background() {
     var background = GameInstance.add.sprite(0,0,'newBackground1');
     background.scale.setTo(1, 1);
+};
+
+var btnHome = function home() {
+    var home = GameInstance.add.button(685,50,'home');
+    home.events.onInputUp.add(function(){
+        GameInstance.state.start('state1');
+    },this);
+
 };
 
 mathHelper = {
