@@ -50,7 +50,7 @@ function background() {
 };
 
 var btnHome = function home() {
-    var home = GameInstance.add.button(685,50,'home');
+    var home = GameInstance.add.button(695,30,'home');
     home.events.onInputUp.add(function(){
         GameInstance.state.start('state1');
     },this);
@@ -61,11 +61,16 @@ mathHelper = {
     metreProperty: function(){
         return (Math.floor(Math.random()*9)+1); //1 to 9
     },
+ 
+    cmPropertyddd: function() {
+        return (Math.floor(Math.random()*900)+100);
+    },
+
     cmPropertydd: function() {
         return (Math.floor(Math.random()*89)+10) //10 to 99
     },
     cmPropertyd0: function() {
-        return (Math.floor(Math.random()*9)+1)*10 //10 to 99
+        return (Math.floor(Math.random()*9)+1)*10 //10,20,30,40,50,60,70,80,90
     },
     cmPropertyd: function() {
         return (Math.floor(Math.random()*9)+1);

@@ -107,6 +107,11 @@ demo.state2.prototype = {
         this.drawBox.visible = false;
         this.drawBoxTxt.visible = false;
 
+        //Events
+        this.btnNextQuestion.events.onInputDown.add(function(){
+            GameInstance.state.start("state3");
+        },this);
+
         
     
         //Home
@@ -507,8 +512,9 @@ demo.state2.prototype = {
                     this.drawBoxTxt.visible = true;
                     this.btnNext.visible = false;
                     this.txtNext.visible = false;
+                    this.rectBox.alpha = 1
                 }
-                else if (this.txtNum !=5) {
+                else if (this.txtNum !=6) {
                 this.rectBox.alpha = 1;
                 this.btnNext.visible = true;
                 this.txtNext.visible = true;
@@ -576,6 +582,7 @@ demo.state2.prototype = {
                 this.txtQns.setText('What is ' + this.metreNum + ' m ' +  this.cmNumd + ' cm in centimetres?');
             }
 
+            this.textEE.position.setTo(this.board.x+350,this.board.y+240);
 
         },this);
 
