@@ -65,6 +65,10 @@ mathHelper = {
     cmPropertyddd: function() {
         return (Math.floor(Math.random()*900)+100);
     },
+    
+    cmPropertydd0: function() {
+        return (Math.floor(Math.random()*89)+10)*10;
+    },
 
     cmPropertydd: function() {
         return (Math.floor(Math.random()*89)+10) //10 to 99
