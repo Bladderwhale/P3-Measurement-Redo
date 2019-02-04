@@ -300,7 +300,7 @@ demo.state4.prototype = {
             if (this.txtNum == 4) {
                 this.textA.setText(this.metreNum + " km " + this.cmNumdd0 + " m");
                 this.textA.position.setTo(this.board.x+320,this.board.y+70);
-                this.textB.setText(this.cmNumdd0 + " km");
+                this.textB.setText(this.cmNumdd0 + " m");
                 this.textC.setText(this.metreNum + " km");
                 this.textD.setText(this.metreNum*1000 + this.cmNumdd0*1 + " m");
                 this.cloudtxt.setText("1 km = 1000 m")
@@ -312,17 +312,17 @@ demo.state4.prototype = {
                 this.textCCC.setText(this.metreNum + " km");
             }
             if (this.txtNum == 5) {
-                this.textA.setText(this.metreNum + " km " + this.cmNumd + " m");
+                this.textA.setText(this.metreNum + " km " + this.cmNumd0d + " m");
                 this.textA.position.setTo(this.board.x+320,this.board.y+70);
-                this.textB.setText(this.cmNumd + " m");
+                this.textB.setText(this.cmNumd0d + " m");
                 this.textC.setText(this.metreNum + " km");
-                this.textD.setText(this.metreNum*1000 + this.cmNumd*1 + " m");
+                this.textD.setText(this.metreNum*1000 + this.cmNumd0d*1 + " m");
                 this.cloudtxt.setText("1 km = 1000 m");
                 this.cloudtxt1.setText(this.metreNum + " km = " + this.metreNum * 1000 + " m");
                 //
-                this.textAAA.setText(this.metreNum + " km " + this.cmNumd + " m");
+                this.textAAA.setText(this.metreNum + " km " + this.cmNumd0d + " m");
                 this.textAAA.position.setTo(this.board.x+320,this.board.y+70);
-                this.textBBB.setText(this.cmNumd + " m");
+                this.textBBB.setText(this.cmNumd0d + " m");
                 this.textCCC.setText(this.metreNum + " km");
             }
             //
@@ -332,7 +332,8 @@ demo.state4.prototype = {
                 (this.inputNum0.value == this.metreNum*1000 + this.cmNumd0*1) ||
                 (this.inputNum0.value == this.metreNum*1000 + this.cmNumdd*1) ||
                 (this.inputNum0.value == this.metreNum*1000 + this.cmNumd*1) ||
-                (this.inputNum0.value == this.metreNum*1000 + this.cmNumdd0*1))
+                (this.inputNum0.value == this.metreNum*1000 + this.cmNumdd0*1) ||
+                (this.inputNum0.value == this.metreNum*1000 + this.cmNumd0d*1))
                  {
                     this.btnCheck.visible = false;
                     this.txtCheck.visible = false;
@@ -516,12 +517,12 @@ demo.state4.prototype = {
                 this.textEE.setText(this.metreNum*1000 + this.cmNumdd0*1 + "");
             }
             if (this.txtNum == 5) {
-                this.textAA.setText(this.metreNum + " km " + this.cmNumd + " m");
+                this.textAA.setText(this.metreNum + " km " + this.cmNumd0d + " m");
                 this.textAA.position.setTo(this.board.x+320,this.board.y+70);
-                this.textBB.setText(this.cmNumd + " m");
+                this.textBB.setText(this.cmNumd0d + " m");
                 this.textCC.setText(this.metreNum + " km");
-                this.textDD.setText(this.metreNum*1000 + this.cmNumd*1 + " m");
-                this.textEE.setText(this.metreNum*1000 + this.cmNumd*1 + "");
+                this.textDD.setText(this.metreNum*1000 + this.cmNumd0d*1 + " m");
+                this.textEE.setText(this.metreNum*1000 + this.cmNumd0d*1 + "");
             }
             //
             this.tween44.start();
@@ -632,9 +633,8 @@ demo.state4.prototype = {
                 this.txtQns.addColor('#000000',18);
             }
             if (this.txtNum == 5) {
-                this.cmNumd = mathHelper.cmPropertyd();
-                this.txtQns.addColor('#000000',16);
-                this.txtQns.setText('What is ' + this.metreNum + ' km ' +  this.cmNumd + ' m in metres?');
+                this.cmNumd0d = mathHelper.cmPropertyd0d();
+                this.txtQns.setText('What is ' + this.metreNum + ' km ' +  this.cmNumd0d + ' m in metres?');
             }
 
             this.textEE.position.setTo(this.board.x+350,this.board.y+240);

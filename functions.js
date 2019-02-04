@@ -78,5 +78,8 @@ mathHelper = {
     },
     cmPropertyd: function() {
         return (Math.floor(Math.random()*9)+1);
+    },
+    cmPropertyd0d: function() {
+        return ((Math.floor(Math.random()*9)+1)*100)+(Math.floor(Math.random()*9)+1);
     }
 };
